@@ -19,6 +19,7 @@
           <!-- constructor argument -->
           <constructor-arg ref="myFortune" />
     </bean>
+   
     
 </beans>
 
