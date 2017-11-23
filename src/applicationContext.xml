@@ -10,16 +10,23 @@
     <!-- Define your beans here -->
     
     <!-- add dependency -->
-    <bean id="myFortune" 
+    <bean id="myFortuneService" 
            class="com.example.springdemo.HappyFortuneService">
     </bean>
     
     <bean id="myCoach" 
           class="com.example.springdemo.TrackCoach">
+          
           <!-- constructor argument -->
-          <constructor-arg ref="myFortune" />
+          <constructor-arg ref="myFortuneService" />
     </bean>
    
+   <bean id="myCricketCoach"
+         class="com.example.springdemo.CricketCoach">
+         
+         <!--  set up setter injection -->
+         <property name="fortuneService" ref="myFortuneService"></property>
+   </bean>
     
 </beans>
 
